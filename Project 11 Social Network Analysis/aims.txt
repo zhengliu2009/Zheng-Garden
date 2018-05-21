@@ -1,0 +1,9 @@
+1. From the following matrices, find the ? eigenvalues, and the ? eigenvectors as many as possible.
+open square brackets table row 0 1 0 row 0 0 1 row 2 1 cell minus 2 end cell end table close square brackets  
+(Bonus) open square brackets table row 2 0 0 0 row 1 2 0 0 row 0 0 0 1 row 0 0 cell minus 6 end cell 5 end table close square brackets
+2. Find the Hubs and Authorities of the graphs below given by HITS. Are the results consistent with the notions of Hubs and Authorities?
+
+
+ 
+
+

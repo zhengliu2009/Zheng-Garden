@@ -1,0 +1,44 @@
+In this assignment, your tasks are to build recommender systems based on user's interests and past activities. This dataset was drawn from the social talk and seminar website named CoMeT (http://pittsburgh.comettalks.com). It provides the local Pittsburgh talks and online webinars for research communities and enthusiasts.
+
+The dataset contains two files:
+
+talk.txt
+user_view.txt
+First of all, randomly split 80/10/10 (more or less) of the data as the training/validation/test sets. You can split them based on users and keep all talks, OR separate them based on talks and use all the users.
+
+Task 1: Content-based Recommendation
+1.1) TF-IDF Model
+
+Convert the textual fields (title and detail) of each talk from the talk.txt to TF-IDF vectors. To simplify the task, exclude the talk's statistics and types of talk features. Use scikit-learn or gensim libraries or write your own.
+Build the "seen" user profile vector space model by averaging the talk vectors that users have seen user_view.txt.
+Build a recommender that from what user has seen (training set), predicts which talk user will view (in the validation and test sets).
+Report the accuracy of the training/validation/test sets.
+1.2) Word Embedding Model
+
+Convert the textual fields (title and detail) of each talk from the talk.txt to word vectors. To simplify the task, exclude the talk's statistics and types of talk features.
+
+Facebook fastText (Dim. 100) (https://fasttext.cc/docs/en/english-vectors.html)
+Stanford GloVe (Dim. 300): (http://nlp.stanford.edu/data/wordvecs/glove.42B.300d.zip)
+Luminoso ConceptNet Numberbatch (Dim. 300) (https://github.com/commonsense/conceptnet-numberbatch) (Recommend)
+Build the "seen" user profile vector space model by averaging the talk vectors that users have seen.
+
+Build a recommender that from what user has seen (training set), predicts which talk user will view (in the validation and test sets).
+Report the results on the training/validation/test sets.
+Task 2: Collaborative Filtering
+
+From the training set, convert the user_view.txt into a user-talk matrix.
+
+2.1) User-based/Item-based Collaborative Filtering
+
+Follow and adapt from this tutorial.
+Report the results on the training/validation/test sets.
+2.2) Matrix Factorization
+
+Follow and adapt from this tutorial.
+Report the results on the training/validation/test sets.
+Task 3: Ensemble - Hybrid Recommendation
+3.1) Ensemble
+
+Use Talks' statistic and other meta-data along with the new features that you create more to combine these feature with the outputs from task 1 and task 2.
+Create an ensemble classifier (linear or non-linear).
+Report the results on the training/validation/test sets.
